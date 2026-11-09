@@ -1,0 +1,129 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>@ViewData["Title"] | Helen Mina - .NET Backend Developer</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/HelenMinaPortfolio.styles.css" asp-append-version="true" />
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="site-header">
+
+        <nav class="navbar navbar-expand-lg ocean-navbar">
+            <div class="container">
+
+                <!-- Brand -->
+                <a class="navbar-brand" href="#home">
+                    <span class="brand-logo">HM</span>
+                    <span class="brand-name">Helen Mina</span>
+                </a>
+
+                <!-- Mobile Menu -->
+                <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#portfolioNavbar"
+                        aria-controls="portfolioNavbar"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="portfolioNavbar">
+
+                    <!-- Navigation Links -->
+                    <ul class="navbar-nav mx-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#home">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#skills">Skills</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects">Projects</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#experience">Experience</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+
+                    </ul>
+
+                    <!-- Header Actions -->
+                    <div class="nav-actions">
+
+
+                        <a href="@Url.Content("~/files/Helen_Mina_SoftwareDevelopment.pdf")"
+                           class="download-cv"
+                           download="Helen_Mina_SoftwareDevelopment.pdf">
+
+                            <span>↓</span>
+                            Download CV
+
+                        </a>
+
+
+                        <button type="button"
+                                class="theme-toggle"
+                                id="themeToggle"
+                                aria-label="Switch to dark theme"
+                                title="Switch theme">
+
+                            <span id="themeIcon">☀</span>
+
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+
+    <!-- Main Content -->
+    <main role="main">
+        @RenderBody()
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>
+                &copy; @DateTime.Now.Year Helen Mina.
+                Designed and developed with care.
+            </p>
+        </div>
+    </footer>
+
+
+    <!-- Scripts -->
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>

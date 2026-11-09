@@ -1,0 +1,19 @@
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build output
+**/bin/
+**/obj/
+
+# User-specific publishing settings
+*.pubxml.user
+
+# Certificates
+*.pfx
+
+# Local development configuration
+appsettings.Development.json
